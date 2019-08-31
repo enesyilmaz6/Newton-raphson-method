@@ -7,14 +7,14 @@ import os
 x = sp.Symbol("x") # we decided variable
 func_list = []
 tfunc_list = []
-func = input("Fonksiyonu giriniz: ")
+func = input("Function : ")
 func = sp.sympify(func) # string transform function
 tfunc = func.diff(x) # derivative func
 
 bnok = [] # start point
-bnok.append(float(input("Başlangıç noktası giriniz: ")))
+bnok.append(float(input("Starting Point: ")))
 
-iterasyon = int(input("Kaç iterasyon ilerleyecek: ")) # iteration number
+iterasyon = int(input("İteration number: ")) # iteration number
 
 func_list.append(func.subs(x,bnok[0])) # first function value
 tfunc_list.append(tfunc.subs(x,bnok[0])) # first derivative function value
